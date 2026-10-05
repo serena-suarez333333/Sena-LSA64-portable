@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#ffffff" />
+	<title>UNM · Traductor de señas</title>
+	<link rel="stylesheet" href="styles.css?v=3" />
+	<script src="app.js?v=3" defer></script>
+</head>
+<body>
+
+	<div class="app">
+
+		<header class="header">
+			<a href="#" class="logo">
+				<img src="img/unm-logo.jpg" alt="Universidad Nacional de Moreno" />
+			</a>
+
+			<div class="connection-pill" id="connection-pill" data-state="offline">
+				<span id="connection-label">En espera</span>
+			</div>
+		</header>
+
+
+		<main class="translator">
+
+			<section class="camera-section">
+
+				<div class="section-header">
+					<h1>Traductor de señas</h1>
+					<span id="camera-state">Cámara apagada</span>
+				</div>
+
+				<div class="camera-stage" id="camera-stage">
+
+					<video id="camera-feed" autoplay muted playsinline aria-label="Vista previa de la cámara"></video>
+
+					<img id="processed-feed" alt="Vista de la cámara" />
+
+					<div class="camera-placeholder" id="camera-placeholder">
+						<p>Activá la cámara para comenzar</p>
+					</div>
+
+					<div class="feed-status">
+						<span id="hand-state">
+							Sin manos detectadas
+						</span>
+					</div>
+
+				</div>
+
+
+				<div class="camera-controls">
+
+					<button class="primary-button" id="toggle-camera" type="button">
+						<span id="camera-button-label">
+							Iniciar cámara
+						</span>
+					</button>
+
+					<label class="speech-control" for="speech-toggle">
+						<input id="speech-toggle" type="checkbox" />
+
+						<span class="toggle-track">
+							<span></span>
+						</span>
+
+						<span>Leer traducción</span>
+					</label>
+
+				</div>
+
+				<div class="camera-help" id="camera-help" hidden>
+					<p id="camera-help-message"></p>
+
+					<div class="camera-help-links">
+						<a id="certificate-link">
+							Descargar certificado
+						</a>
+
+						<a id="secure-link">
+							Abrir dirección segura
+						</a>
+					</div>
+				</div>
+
+			</section>
+
+
+			<aside class="translation-section">
+
+				<div class="translation-header">
+					<h2>Traducción</h2>
+
+					<span class="language-tag">
+						LSA → Español
+					</span>
+				</div>
+
+
+				<div class="current-translation" aria-live="polite" aria-atomic="true">
+
+					<span class="translation-label">
+						Resultado
+					</span>
+
+					<p id="output">—</p>
+
+					<span class="gesture-detail" id="gesture-detail">
+						La traducción aparecerá aquí
+					</span>
+
+				</div>
+
+
+				<div class="stability">
+					<div class="stability-row">
+						<span>Consistencia (4 fotogramas)</span>
+						<span id="stability-value">—</span>
+					</div>
+					<div class="stability-track" aria-hidden="true">
+						<span id="stability-fill"></span>
+					</div>
+				</div>
+
+
+				<div class="history">
+
+					<div class="history-heading">
+						<h2>Historial</h2>
+
+						<button class="text-button" id="clear-history" type="button">
+							Limpiar
+						</button>
+					</div>
+
+					<ol class="transcript-list" id="transcript-list" aria-live="polite">
+						<li class="transcript-empty">
+							Todavía no hay traducciones.
+						</li>
+					</ol>
+
+				</div>
+
+			</aside>
+
+		</main>
+
+		<footer class="footer">
+			<span id="footer-message">Conecta la cámara para comenzar</span>
+		</footer>
+
+	</div>
+
+</body>
+</html>

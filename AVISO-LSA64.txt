@@ -1,0 +1,20 @@
+ATRIBUCION Y CONDICIONES DEL MODELO LSA64
+=========================================
+
+El modelo incluido se entreno con LSA64: A Dataset of Argentinian Sign
+Language, de Franco Ronchetti, Facundo Quiroga, Cesar Estrebou, Laura Lanzarini
+y Alejandro Rosete.
+
+Fuente: https://facundoq.github.io/datasets/lsa64/
+Articulo: http://sedici.unlp.edu.ar/bitstream/handle/10915/56764/Documento_completo.pdf-PDFA.pdf?sequence=1&isAllowed=y
+Licencia del dataset: Creative Commons Attribution-NonCommercial-ShareAlike
+4.0 International (CC BY-NC-SA 4.0):
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+El dataset no esta incluido en este paquete. El modelo derivado se comparte con
+atribucion, bajo condiciones no comerciales y de compartir igual. No usar ni
+redistribuir comercialmente sin obtener autorizacion apropiada.
+
+Las etiquetas espanolas son traducciones orientativas de las glosas inglesas
+del dataset; no han sido validadas por especialistas de LSA. El reconocedor es
+experimental y no traduce frases ni gramatica.
